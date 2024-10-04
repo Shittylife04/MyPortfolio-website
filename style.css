@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif; 
+}
+
+.navbar {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(30px); 
+    border-bottom: 1px solid rgb(86, 141, 138);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 10px rgba(214, 6, 6, 0.2); 
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0px 50px; 
+}
+
+.navbar a {
+    color: rgb(255, 252, 252);
+    font-size: large;
+    font-family: monospace;
+    text-decoration: none;
+    padding: 10px 15px; 
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(216, 172, 116, 0.8);
+    border-radius: 10px;
+}
+
+.navbar a:active{
+    background-color:rgb(219, 85, 45);
+}
+
+section {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    overflow:auto;
+}
+
+#home {
+    background-image: url(back1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#about {
+    background-image: url(back2.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#skills {
+    background-image: url(back3.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#projects{
+    background-image: url(back4.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+
+#contact{
+    background-image: url(back5.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#contact h1{
+    color:aliceblue;
+}
+
+.avatar{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+main{
+    font-family: cursive;
+}
+
+#home h1{
+    -webkit-text-fill-color: rgba(255, 231, 187, 0.822);
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+#home p{
+    font-size: 20px;
+    color:rgb(233, 235, 241);
+}
+
+
+#about legend{
+    font-family: sans-serif;
+    font-size: 30px;
+    color:rgb(203, 238, 75);
+}
+
+#about img{
+    height:400px;
+    width: 400px;
+    float: left;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;    
+}
+
+#about p{
+    color:azure;
+    font-size: 35px
+}
+
+#skills legend{
+    color:aqua;
+    font-size: 40px
+}
+
+#skills li{
+    color:azure;
+    font-size: 32px;
+}
+
+#projects h1{
+    color: rgb(222, 252, 154);
+    font-size: 50px;
+}
+
+#projects p{
+    font-size: 30px;
+    color: beige;
+}
+
+.container{
+    border:5px solid rgb(218, 224, 230);
+    width: 900px;
+    border-radius: 40px 0px;
+    backdrop-filter: blur(10px);
+}
+
+.c-container{
+    border:2px solid rgb(53, 255, 70);
+    width: 500px;
+    height: 400px;
+    justify-content: center;
+    border-radius: 50px 0px;
+    backdrop-filter: blur(30px);
+}
+
+.f-logo, .i-logo {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+.f-logo img, .i-logo img {
+    width: 50px; 
+    height: auto; 
+    margin-right: 15px; 
+}
+
+h2, h3 {
+    font-size: 20px; 
+    color: #007BFF; 
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s; 
+}
+
+a:hover {
+    color: #0056b3; 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    ul {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 10px; /* Space above the nav items */
+    }
+
+    ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Space between nav items */
+    }
+
+    .avatar {
+        width: 120px; /* Adjust avatar size */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    h1, h2, h3 {
+        font-size: 20px; /* Adjust font size for subheadings */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px; /* Further adjust font size */
+    }
+
+    .container, .c-container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .f-logo, .i-logo {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center; /* Center items */
+    }
+
+    h1, h2, h3 {
+        font-size: 18px; /* Further adjust font size */
+    }
+}
+
